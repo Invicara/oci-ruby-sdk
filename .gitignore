@@ -8,7 +8,7 @@ abandoned/
 .yardoc/
 .ruby-version
 .python-version
-oci*.gem
+*.gem
 variants/
 temp/
 dist/

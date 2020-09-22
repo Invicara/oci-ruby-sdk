@@ -7,7 +7,7 @@ $LOAD_PATH.unshift(File.join(File.dirname(__FILE__), "lib"))
 require 'oci/version'
 
 Gem::Specification.new do |s|
-  s.name        = "oci"
+  s.name        = "invicara-oci"
   s.version     = OCI::VERSION
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Oracle"]
@@ -15,7 +15,10 @@ Gem::Specification.new do |s|
   s.homepage    = "https://docs.cloud.oracle.com/tools/ruby/latest/frames.html"
   s.summary     = "Oracle Cloud Infrastructure Ruby SDK"
   s.description = "Ruby SDK for Oracle Cloud Infrastructure."
-  s.licenses     = ["UPL-1.0", "Apache-2.0"]
+  s.licenses    = ["UPL-1.0", "Apache-2.0"]
+
+  s.metadata["allowed_push_host"] = "https://rubygems.pkg.github.com/Invicara"
+  s.metadata["github_repo"]       = "ssh://github.com/Invicara/oci-ruby-sdk"
 
   s.required_ruby_version = '>= 2.2.0'
 
