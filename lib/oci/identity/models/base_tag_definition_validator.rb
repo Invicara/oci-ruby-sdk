@@ -20,7 +20,7 @@ module OCI
   #
   # This class has direct subclasses. If you are using this class as input to a service operations then you should favor using a subclass over the base class
   class Identity::Models::BaseTagDefinitionValidator
-    VALIDATOR_TYPE_ENUM = [
+    VALIDATOR_TYPES_ENUM = [
       VALIDATOR_TYPE_ENUM = 'ENUM'.freeze,
       VALIDATOR_TYPE_DEFAULT = 'DEFAULT'.freeze,
       VALIDATOR_TYPE_UNKNOWN_ENUM_VALUE = 'UNKNOWN_ENUM_VALUE'.freeze
@@ -91,7 +91,7 @@ module OCI
     # @param [Object] validator_type Object to be assigned
     def validator_type=(validator_type)
       # rubocop:disable Style/ConditionalAssignment
-      if validator_type && !VALIDATOR_TYPE_ENUM.include?(validator_type)
+      if validator_type && !VALIDATOR_TYPES_ENUM.include?(validator_type)
         OCI.logger.debug("Unknown value for 'validator_type' [" + validator_type + "]. Mapping to 'VALIDATOR_TYPE_UNKNOWN_ENUM_VALUE'") if OCI.logger
         @validator_type = VALIDATOR_TYPE_UNKNOWN_ENUM_VALUE
       else
